@@ -36,7 +36,11 @@
   "repository": "/businesscat",
   "scripts": {
     "prepublish": "gulp prepublish",
-    "test": "gulp"
+    "test": "gulp",
+    "start": "node app.js"
   },
-  "license": "Apache-2.0"
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@slack/client": "^3.5.4"
+  }
 }
