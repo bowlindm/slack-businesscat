@@ -5,8 +5,7 @@
   "homepage": "",
   "author": {
     "name": "Nick Stetich",
-    "email": "nstetich@gmail.com",
-    "url": ""
+    "email": "nstetich@gmail.com"
   },
   "files": [
     "lib"
