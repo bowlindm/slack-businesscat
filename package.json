@@ -32,7 +32,7 @@
       "mocha": true
     }
   },
-  "repository": "/businesscat",
+  "repository": "http://github.com/nstetich/slack-businesscat",
   "scripts": {
     "prepublish": "gulp prepublish",
     "test": "gulp",
