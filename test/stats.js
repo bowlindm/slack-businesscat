@@ -14,7 +14,7 @@ describe('stats', function () {
     it('should return a list of top users', function () {
       return stats.topUsers().then(function (userList) {
         assert.ok(userList.find(function (user) {
-          return user.username === 'barney';
+          return user.userId === 'barney';
         }));
       });
     });
