@@ -1,6 +1,5 @@
 var bot = require('./lib/bot');
-var slack = require('./lib/slack');
-var stats = require('./lib/statsDb');
+var stats = require('./lib/stats');
 var express = require('express');
 var app = express();
 
@@ -10,8 +9,9 @@ app.get('/', function (req, res) {
 });
 
 app.get('/api/stats', function (req, res) {
-      res.status(200).json(users);
-    });
+  return stats.topUsers().then(function (users) {
+    res.status(200).json(users);
+  });
 });
 
 var server = app.listen(process.env.PORT || 3000, function () {
