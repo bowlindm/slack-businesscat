@@ -1,6 +1,6 @@
 var bot = require('./lib/bot');
 var slack = require('./lib/slack');
-var stats = require('./lib/stats');
+var stats = require('./lib/statsDb');
 var express = require('express');
 var app = express();
 
@@ -10,16 +10,6 @@ app.get('/', function (req, res) {
 });
 
 app.get('/api/stats', function (req, res) {
-  return stats.topUsers()
-    .then(function (usersById) {
-      var users = usersById.map(function (user) {
-        var slackUser = slack.rtm.dataStore.getUserById(user.userId);
-        return {
-          username: slackUser.name,
-          name: slackUser.real_name,
-          count: user.count
-        };
-      });
       res.status(200).json(users);
     });
 });

@@ -1,7 +1,7 @@
 /* eslint max-nested-callbacks: ["warn", 5] */
 
 var assert = require('assert');
-var stats = require('../lib/stats');
+var stats = require('../lib/statsDb');
 
 describe('stats', function () {
   describe('log', function () {
